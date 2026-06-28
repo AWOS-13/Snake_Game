@@ -42,24 +42,4 @@ python main.py
 - Each piece of food eaten adds **2 points**.
 - The high score is saved automatically to `highscore.txt` if you beat it.
 
-## ⚠️ Known Issue / TODO
 
-`scoreboard.py` currently reads/writes `highscore.txt` using a **hardcoded absolute path**:
-
-```python
-with open("C:/Users/awwso/Desktop/Projects/python/GUI/Snake Game/highscore.txt") as file:
-```
-
-This will break on any machine other than the original one. Before pushing to GitHub, consider replacing it with a relative path, for example:
-
-```python
-import os
-HIGHSCORE_FILE = os.path.join(os.path.dirname(__file__), "highscore.txt")
-
-with open(HIGHSCORE_FILE) as file:
-    ...
-```
-
-## 📝 License
-
-Feel free to use and modify this project for learning purposes.
